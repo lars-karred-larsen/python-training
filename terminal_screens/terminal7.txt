@@ -1,0 +1,156 @@
+[student@master ~]$ git --version
+git version 2.39.3
+[student@master ~]$ git config --global user.name "Lars"
+[student@master ~]$ git config --global user.email "Lars@example.com"
+[student@master ~]$ pwd
+/home/student
+[student@master ~]$ ls -al
+total 36
+drwx------. 19 student student 4096 Feb 28 17:17 .
+drwxr-xr-x.  3 root    root      21 Aug 11  2023 ..
+-rw-------.  1 student student   42 Dec 18 17:34 .bash_history
+-rw-r--r--.  1 student student   18 Nov 24  2022 .bash_logout
+-rw-r--r--.  1 student student  141 Nov 24  2022 .bash_profile
+-rw-r--r--.  1 student student  492 Nov 24  2022 .bashrc
+drwx------. 17 student student 4096 Feb 28 12:57 .cache
+drwx------. 10 student student 4096 Feb 28 12:49 .config
+drwxr-xr-x.  2 student student    6 Aug 11  2023 Desktop
+drwxr-xr-x.  2 student student    6 Aug 11  2023 Documents
+drwxr-xr-x.  3 student student 4096 Feb 28 13:16 Downloads
+drwxr-xr-x   5 student student   95 Feb 28 12:49 .eclipse
+drwxr-xr-x   5 student student   57 Feb 28 15:11 eclipse-python-workspace
+-rw-r--r--   1 student student   46 Feb 28 17:17 .gitconfig
+drwx------.  6 student student   54 Feb 28 12:57 .local
+drwxr-xr-x.  5 student student   54 Dec  3 08:02 .mozilla
+drwxr-xr-x.  2 student student    6 Aug 11  2023 Music
+drwxr-xr-x   3 student student   82 Feb 28 13:00 .p2
+drwxr-xr-x.  2 student student    6 Aug 11  2023 Pictures
+drwxr-xr-x.  2 student student    6 Aug 11  2023 Public
+drwxr-xr-x   3 student student   24 Feb 28 15:01 .pydev
+drwxr-xr-x   2 student student   25 Feb 28 13:00 .swt
+drwxr-xr-x.  2 student student    6 Aug 11  2023 Templates
+drwxr-xr-x.  2 student student    6 Aug 11  2023 Videos
+[student@master ~]$ du -sh eclipse-python-workspace/
+3.5M	eclipse-python-workspace/
+[student@master ~]$ ls -l eclipse-python-workspace/
+total 0
+drwxr-xr-x 4 student student 71 Feb 28 15:04 HelloWorld
+drwxr-xr-x 4 student student 71 Feb 28 15:29 Literals
+[student@master ~]$ ls -al eclipse-python-workspace/
+total 4
+drwxr-xr-x   5 student student   57 Feb 28 15:11 .
+drwx------. 19 student student 4096 Feb 28 17:17 ..
+drwxr-xr-x   4 student student   71 Feb 28 15:04 HelloWorld
+drwxr-xr-x   4 student student   71 Feb 28 15:29 Literals
+drwxr-xr-x   4 student student   80 Feb 28 12:49 .metadata
+[student@master ~]$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/student/.git/
+[student@master ~]$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.bash_history
+	.bash_logout
+	.bash_profile
+	.bashrc
+	.cache/
+	.config/
+	.eclipse/
+	.gitconfig
+	.local/
+	.mozilla/
+	.p2/
+	.pydev/
+	.swt/
+	Downloads/
+	eclipse-python-workspace/
+
+nothing added to commit but untracked files present (use "git add" to track)
+[student@master ~]$ git add eclipse-python-workspace/^C
+[student@master ~]$ ls -adl eclipse-python-workspace/[!.]*
+drwxr-xr-x 4 student student 71 Feb 28 15:04 eclipse-python-workspace/HelloWorld
+drwxr-xr-x 4 student student 71 Feb 28 15:29 eclipse-python-workspace/Literals
+[student@master ~]$ git add eclipse-python-workspace/[!.]*
+[student@master ~]$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   eclipse-python-workspace/HelloWorld/.project
+	new file:   eclipse-python-workspace/HelloWorld/.pydevproject
+	new file:   eclipse-python-workspace/HelloWorld/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/HelloWorld/src/main/__init__.py
+	new file:   eclipse-python-workspace/HelloWorld/src/main/python/__init__.py
+	new file:   eclipse-python-workspace/HelloWorld/src/main/python/hello.py
+	new file:   eclipse-python-workspace/Literals/.project
+	new file:   eclipse-python-workspace/Literals/.pydevproject
+	new file:   eclipse-python-workspace/Literals/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/Literals/src/main/__init__.py
+	new file:   eclipse-python-workspace/Literals/src/main/python/__init__.py
+	new file:   eclipse-python-workspace/Literals/src/main/python/literal.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.bash_history
+	.bash_logout
+	.bash_profile
+	.bashrc
+	.cache/
+	.config/
+	.eclipse/
+	.gitconfig
+	.local/
+	.mozilla/
+	.p2/
+	.pydev/
+	.swt/
+	Downloads/
+	eclipse-python-workspace/.metadata/
+
+[student@master ~]$ git commit -m "Day1 training"
+[master (root-commit) df68ff7] Day1 training
+ 12 files changed, 110 insertions(+)
+ create mode 100644 eclipse-python-workspace/HelloWorld/.project
+ create mode 100644 eclipse-python-workspace/HelloWorld/.pydevproject
+ create mode 100644 eclipse-python-workspace/HelloWorld/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/HelloWorld/src/main/__init__.py
+ create mode 100644 eclipse-python-workspace/HelloWorld/src/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/HelloWorld/src/main/python/hello.py
+ create mode 100644 eclipse-python-workspace/Literals/.project
+ create mode 100644 eclipse-python-workspace/Literals/.pydevproject
+ create mode 100644 eclipse-python-workspace/Literals/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/Literals/src/main/__init__.py
+ create mode 100644 eclipse-python-workspace/Literals/src/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/Literals/src/main/python/literal.py
+[student@master ~]$ git branch -M main
+[student@master ~]$ git remote add origin https://github.com/lars-karred-larsen/python-training.git
+[student@master ~]$ git push -u origin main
+Username for 'https://github.com': lars-karred-larsen
+Password for 'https://lars-karred-larsen@github.com': 
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (19/19), 2.25 KiB | 2.25 MiB/s, done.
+Total 19 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/lars-karred-larsen/python-training.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+[student@master ~]$ 
+
