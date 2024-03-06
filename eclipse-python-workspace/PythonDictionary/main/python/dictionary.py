@@ -29,3 +29,5 @@ print("Removing the key \"age\" again:")
 pop_value=dictionary1.pop("age","Key not found")
 print("The pop value is", pop_value)
 
+print(dictionary1['city'])
+print(dictionary1.items(2))
