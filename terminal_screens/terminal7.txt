@@ -154,3 +154,463 @@ To https://github.com/lars-karred-larsen/python-training.git
 branch 'main' set up to track 'origin/main'.
 [student@master ~]$ 
 
+[student@master ~]$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   eclipse-python-workspace/PythonDictionary/main/python/dictionary.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.bash_history
+	.bash_logout
+	.bash_profile
+	.bashrc
+	.cache/
+	.config/
+	.eclipse/
+	.gitconfig
+	.local/
+	.mozilla/
+	.p2/
+	.pki/
+	.pydev/
+	.swt/
+	.viminfo
+	.vscode/
+	Downloads/
+	eclipse-python-workspace/.metadata/
+	eclipse-python-workspace/MathFunctions/
+	eclipse-python-workspace/PyhtonPolymorphism/
+	eclipse-python-workspace/PythonClass/
+	eclipse-python-workspace/PythonClassMethods/
+	eclipse-python-workspace/PythonClassMethodsTwo/
+	eclipse-python-workspace/PythonExceptions/
+	eclipse-python-workspace/PythonFunctions/
+	eclipse-python-workspace/PythonHost/
+	eclipse-python-workspace/PythonInheritance/
+	eclipse-python-workspace/PythonInheritanceTwo/
+	eclipse-python-workspace/PythonMultipleInheritance/
+	eclipse-python-workspace/PythonPackages/
+	eclipse-python-workspace/PythonUserException/
+	eclipse-python-workspace/PythonVariables/
+	git_token.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[student@master ~]$ git add eclipse-python-workspace/[!.]
+fatal: pathspec 'eclipse-python-workspace/[!.]' did not match any files
+[student@master ~]$ git add eclipse-python-workspace/[!.]*
+[student@master ~]$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   eclipse-python-workspace/MathFunctions/.project
+	new file:   eclipse-python-workspace/MathFunctions/.pydevproject
+	new file:   eclipse-python-workspace/MathFunctions/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/MathFunctions/main/__init__.py
+	new file:   eclipse-python-workspace/MathFunctions/main/python/__init__.py
+	new file:   eclipse-python-workspace/MathFunctions/main/python/mathFunctions.py
+	new file:   eclipse-python-workspace/PyhtonPolymorphism/.project
+	new file:   eclipse-python-workspace/PyhtonPolymorphism/.pydevproject
+	new file:   eclipse-python-workspace/PyhtonPolymorphism/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PyhtonPolymorphism/main/__init__.py
+	new file:   eclipse-python-workspace/PyhtonPolymorphism/main/python/__init__.py
+	new file:   eclipse-python-workspace/PyhtonPolymorphism/main/python/classesPolymorphism.py
+	new file:   eclipse-python-workspace/PythonClass/.project
+	new file:   eclipse-python-workspace/PythonClass/.pydevproject
+	new file:   eclipse-python-workspace/PythonClass/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonClass/main/__init__.py
+	new file:   eclipse-python-workspace/PythonClass/main/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonClass/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonClass/main/python/classes.py
+	new file:   eclipse-python-workspace/PythonClassMethods/.project
+	new file:   eclipse-python-workspace/PythonClassMethods/.pydevproject
+	new file:   eclipse-python-workspace/PythonClassMethods/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonClassMethods/main/__init__.py
+	new file:   eclipse-python-workspace/PythonClassMethods/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonClassMethods/main/python/classesMethods.py
+	new file:   eclipse-python-workspace/PythonClassMethodsTwo/.project
+	new file:   eclipse-python-workspace/PythonClassMethodsTwo/.pydevproject
+	new file:   eclipse-python-workspace/PythonClassMethodsTwo/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonClassMethodsTwo/main/__init__.py
+	new file:   eclipse-python-workspace/PythonClassMethodsTwo/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonClassMethodsTwo/main/python/classesMethodsTwo.py
+	modified:   eclipse-python-workspace/PythonDictionary/main/python/dictionary.py
+	new file:   eclipse-python-workspace/PythonExceptions/.project
+	new file:   eclipse-python-workspace/PythonExceptions/.pydevproject
+	new file:   eclipse-python-workspace/PythonExceptions/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonExceptions/main/__init__.py
+	new file:   eclipse-python-workspace/PythonExceptions/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonExceptions/main/python/exceptions.py
+	new file:   eclipse-python-workspace/PythonFunctions/.project
+	new file:   eclipse-python-workspace/PythonFunctions/.pydevproject
+	new file:   eclipse-python-workspace/PythonFunctions/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonFunctions/main/__init__.py
+	new file:   eclipse-python-workspace/PythonFunctions/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonFunctions/main/python/functionList.py
+	new file:   eclipse-python-workspace/PythonHost/.project
+	new file:   eclipse-python-workspace/PythonHost/.pydevproject
+	new file:   eclipse-python-workspace/PythonHost/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonHost/main/__init__.py
+	new file:   eclipse-python-workspace/PythonHost/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonHost/main/python/host.py
+	new file:   eclipse-python-workspace/PythonInheritance/.project
+	new file:   eclipse-python-workspace/PythonInheritance/.pydevproject
+	new file:   eclipse-python-workspace/PythonInheritance/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonInheritance/main/__init__.py
+	new file:   eclipse-python-workspace/PythonInheritance/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonInheritance/main/python/classesInheritance.py
+	new file:   eclipse-python-workspace/PythonInheritanceTwo/.project
+	new file:   eclipse-python-workspace/PythonInheritanceTwo/.pydevproject
+	new file:   eclipse-python-workspace/PythonInheritanceTwo/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonInheritanceTwo/main/__init__.py
+	new file:   eclipse-python-workspace/PythonInheritanceTwo/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonInheritanceTwo/main/python/classesInheritanceTwo.py
+	new file:   eclipse-python-workspace/PythonMultipleInheritance/.project
+	new file:   eclipse-python-workspace/PythonMultipleInheritance/.pydevproject
+	new file:   eclipse-python-workspace/PythonMultipleInheritance/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonMultipleInheritance/main/__init__.py
+	new file:   eclipse-python-workspace/PythonMultipleInheritance/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonMultipleInheritance/main/python/classesMultipleInheritance.py
+	new file:   eclipse-python-workspace/PythonPackages/.project
+	new file:   eclipse-python-workspace/PythonPackages/.pydevproject
+	new file:   eclipse-python-workspace/PythonPackages/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonPackages/main/__init__.py
+	new file:   eclipse-python-workspace/PythonPackages/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonPackages/main/python/packaging.py
+	new file:   eclipse-python-workspace/PythonUserException/.project
+	new file:   eclipse-python-workspace/PythonUserException/.pydevproject
+	new file:   eclipse-python-workspace/PythonUserException/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonUserException/main/__init__.py
+	new file:   eclipse-python-workspace/PythonUserException/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonUserException/main/python/userExceptions.py
+	new file:   eclipse-python-workspace/PythonVariables/.project
+	new file:   eclipse-python-workspace/PythonVariables/.pydevproject
+	new file:   eclipse-python-workspace/PythonVariables/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonVariables/main/__init__.py
+	new file:   eclipse-python-workspace/PythonVariables/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonVariables/main/python/variables.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.bash_history
+	.bash_logout
+	.bash_profile
+	.bashrc
+	.cache/
+	.config/
+	.eclipse/
+	.gitconfig
+	.local/
+	.mozilla/
+	.p2/
+	.pki/
+	.pydev/
+	.swt/
+	.viminfo
+	.vscode/
+	Downloads/
+	eclipse-python-workspace/.metadata/
+	git_token.txt
+
+[student@master ~]$ git commit -m "After day6 training"
+[main 549a53f] After day6 training
+ 86 files changed, 904 insertions(+)
+ create mode 100644 eclipse-python-workspace/MathFunctions/.project
+ create mode 100644 eclipse-python-workspace/MathFunctions/.pydevproject
+ create mode 100644 eclipse-python-workspace/MathFunctions/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/MathFunctions/main/__init__.py
+ create mode 100644 eclipse-python-workspace/MathFunctions/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/MathFunctions/main/python/mathFunctions.py
+ create mode 100644 eclipse-python-workspace/PyhtonPolymorphism/.project
+ create mode 100644 eclipse-python-workspace/PyhtonPolymorphism/.pydevproject
+ create mode 100644 eclipse-python-workspace/PyhtonPolymorphism/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PyhtonPolymorphism/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PyhtonPolymorphism/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PyhtonPolymorphism/main/python/classesPolymorphism.py
+ create mode 100644 eclipse-python-workspace/PythonClass/.project
+ create mode 100644 eclipse-python-workspace/PythonClass/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonClass/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonClass/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonClass/main/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonClass/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonClass/main/python/classes.py
+ create mode 100644 eclipse-python-workspace/PythonClassMethods/.project
+ create mode 100644 eclipse-python-workspace/PythonClassMethods/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonClassMethods/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonClassMethods/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonClassMethods/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonClassMethods/main/python/classesMethods.py
+ create mode 100644 eclipse-python-workspace/PythonClassMethodsTwo/.project
+ create mode 100644 eclipse-python-workspace/PythonClassMethodsTwo/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonClassMethodsTwo/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonClassMethodsTwo/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonClassMethodsTwo/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonClassMethodsTwo/main/python/classesMethodsTwo.py
+ create mode 100644 eclipse-python-workspace/PythonExceptions/.project
+ create mode 100644 eclipse-python-workspace/PythonExceptions/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonExceptions/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonExceptions/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonExceptions/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonExceptions/main/python/exceptions.py
+ create mode 100644 eclipse-python-workspace/PythonFunctions/.project
+ create mode 100644 eclipse-python-workspace/PythonFunctions/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonFunctions/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonFunctions/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonFunctions/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonFunctions/main/python/functionList.py
+ create mode 100644 eclipse-python-workspace/PythonHost/.project
+ create mode 100644 eclipse-python-workspace/PythonHost/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonHost/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonHost/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonHost/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonHost/main/python/host.py
+ create mode 100644 eclipse-python-workspace/PythonInheritance/.project
+ create mode 100644 eclipse-python-workspace/PythonInheritance/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonInheritance/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonInheritance/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonInheritance/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonInheritance/main/python/classesInheritance.py
+ create mode 100644 eclipse-python-workspace/PythonInheritanceTwo/.project
+ create mode 100644 eclipse-python-workspace/PythonInheritanceTwo/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonInheritanceTwo/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonInheritanceTwo/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonInheritanceTwo/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonInheritanceTwo/main/python/classesInheritanceTwo.py
+ create mode 100644 eclipse-python-workspace/PythonMultipleInheritance/.project
+ create mode 100644 eclipse-python-workspace/PythonMultipleInheritance/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonMultipleInheritance/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonMultipleInheritance/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonMultipleInheritance/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonMultipleInheritance/main/python/classesMultipleInheritance.py
+ create mode 100644 eclipse-python-workspace/PythonPackages/.project
+ create mode 100644 eclipse-python-workspace/PythonPackages/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonPackages/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonPackages/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPackages/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPackages/main/python/packaging.py
+ create mode 100644 eclipse-python-workspace/PythonUserException/.project
+ create mode 100644 eclipse-python-workspace/PythonUserException/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonUserException/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonUserException/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonUserException/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonUserException/main/python/userExceptions.py
+ create mode 100644 eclipse-python-workspace/PythonVariables/.project
+ create mode 100644 eclipse-python-workspace/PythonVariables/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonVariables/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonVariables/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonVariables/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonVariables/main/python/variables.py
+[student@master ~]$ git branch -M main
+[student@master ~]$ git remote add origin https://github.com/lars-karred-larsen/python-training.git
+error: remote origin already exists.
+[student@master ~]$ git push -u origin main
+Username for 'https://github.com': lars-karred-larsen
+Password for 'https://lars-karred-larsen@github.com': 
+Enumerating objects: 86, done.
+Counting objects: 100% (86/86), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (79/79), done.
+Writing objects: 100% (80/80), 11.40 KiB | 2.28 MiB/s, done.
+Total 80 (delta 17), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (17/17), completed with 2 local objects.
+To https://github.com/lars-karred-larsen/python-training.git
+   48a6e74..549a53f  main -> main
+branch 'main' set up to track 'origin/main'.
+[student@master ~]$ 
+
+[student@master ~]$ echo "***************************************\n";date;echo "***************************************\n"
+***************************************\n
+Fri Mar  8 09:04:02 PM IST 2024
+***************************************\n
+[student@master ~]$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.bash_history
+	.bash_logout
+	.bash_profile
+	.bashrc
+	.cache/
+	.config/
+	.eclipse/
+	.gitconfig
+	.local/
+	.mozilla/
+	.p2/
+	.pki/
+	.pydev/
+	.swt/
+	.viminfo
+	.vscode/
+	Downloads/
+	eclipse-python-workspace/.metadata/
+	eclipse-python-workspace/PythonPyTest/
+	eclipse-python-workspace/PythonPyTestINI/
+	eclipse-python-workspace/PythonUnitTest/
+	git_token.txt
+	terminal_screens/terminal2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+[student@master ~]$ git add eclipse-python-workspace/[!.]* terminal_screens/
+[student@master ~]$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   eclipse-python-workspace/PythonPyTest/.project
+	new file:   eclipse-python-workspace/PythonPyTest/.pydevproject
+	new file:   eclipse-python-workspace/PythonPyTest/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonPyTest/src/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTest/src/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTest/src/main/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTest/src/main/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTest/src/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTest/src/main/python/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTest/src/main/python/__pycache__/function.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTest/src/main/python/function.py
+	new file:   eclipse-python-workspace/PythonPyTest/src/test/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTest/src/test/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTest/src/test/python/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTest/src/test/python/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTest/src/test/python/__pycache__/test_function.cpython-312-pytest-8.0.2.pyc
+	new file:   eclipse-python-workspace/PythonPyTest/src/test/python/test_function.py
+	new file:   eclipse-python-workspace/PythonPyTestINI/.coverage
+	new file:   eclipse-python-workspace/PythonPyTestINI/.project
+	new file:   eclipse-python-workspace/PythonPyTestINI/.pydevproject
+	new file:   eclipse-python-workspace/PythonPyTestINI/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonPyTestINI/pytest.ini
+	new file:   eclipse-python-workspace/PythonPyTestINI/report.html
+	new file:   eclipse-python-workspace/PythonPyTestINI/src/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestINI/src/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestINI/src/main/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestINI/src/main/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestINI/src/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestINI/src/main/python/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestINI/src/main/python/__pycache__/function.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestINI/src/main/python/function.py
+	new file:   eclipse-python-workspace/PythonPyTestINI/src/test/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestINI/src/test/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestINI/src/test/python/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestINI/src/test/python/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestINI/src/test/python/__pycache__/test_function.cpython-312-pytest-8.0.2.pyc
+	new file:   eclipse-python-workspace/PythonPyTestINI/src/test/python/test_function.py
+	new file:   eclipse-python-workspace/PythonUnitTest/.project
+	new file:   eclipse-python-workspace/PythonUnitTest/.pydevproject
+	new file:   eclipse-python-workspace/PythonUnitTest/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonUnitTest/src/main/__init__.py
+	new file:   eclipse-python-workspace/PythonUnitTest/src/main/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonUnitTest/src/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonUnitTest/src/main/python/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonUnitTest/src/main/python/__pycache__/function.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonUnitTest/src/main/python/function.py
+	new file:   eclipse-python-workspace/PythonUnitTest/src/test/__init__.py
+	new file:   eclipse-python-workspace/PythonUnitTest/src/test/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonUnitTest/src/test/python/__init__.py
+	new file:   eclipse-python-workspace/PythonUnitTest/src/test/python/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonUnitTest/src/test/python/__pycache__/test_function.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonUnitTest/src/test/python/test_function.py
+	new file:   terminal_screens/terminal2.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.bash_history
+	.bash_logout
+	.bash_profile
+	.bashrc
+	.cache/
+	.config/
+	.eclipse/
+	.gitconfig
+	.local/
+	.mozilla/
+	.p2/
+	.pki/
+	.pydev/
+	.swt/
+	.viminfo
+	.vscode/
+	Downloads/
+	eclipse-python-workspace/.metadata/
+	git_token.txt
+
+[student@master ~]$ git commit -m "After day8 training"
+[main db7376b] After day8 training
+ 53 files changed, 1297 insertions(+)
+ create mode 100644 eclipse-python-workspace/PythonPyTest/.project
+ create mode 100644 eclipse-python-workspace/PythonPyTest/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonPyTest/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonPyTest/src/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTest/src/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTest/src/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTest/src/main/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTest/src/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTest/src/main/python/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTest/src/main/python/__pycache__/function.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTest/src/main/python/function.py
+ create mode 100644 eclipse-python-workspace/PythonPyTest/src/test/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTest/src/test/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTest/src/test/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTest/src/test/python/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTest/src/test/python/__pycache__/test_function.cpython-312-pytest-8.0.2.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTest/src/test/python/test_function.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/.coverage
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/.project
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/pytest.ini
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/report.html
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/src/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/src/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/src/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/src/main/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/src/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/src/main/python/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/src/main/python/__pycache__/function.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/src/main/python/function.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/src/test/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/src/test/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/src/test/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/src/test/python/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/src/test/python/__pycache__/test_function.cpython-312-pytest-8.0.2.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestINI/src/test/python/test_function.py
+ create mode 100644 eclipse-python-workspace/PythonUnitTest/.project
+ create mode 100644 eclipse-python-workspace/PythonUnitTest/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonUnitTest/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonUnitTest/src/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonUnitTest/src/main/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonUnitTest/src/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonUnitTest/src/main/python/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonUnitTest/src/main/python/__pycache__/function.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonUnitTest/src/main/python/function.py
+ create mode 100644 eclipse-python-workspace/PythonUnitTest/src/test/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonUnitTest/src/test/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonUnitTest/src/test/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonUnitTest/src/test/python/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonUnitTest/src/test/python/__pycache__/test_function.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonUnitTest/src/test/python/test_function.py
+ create mode 100644 terminal_screens/terminal2.txt
+[student@master ~]$ git branch -M main
+[student@master ~]$ git push -u origin main
+Username for 'https://github.com': lars-karred-larsen
+Password for 'https://lars-karred-larsen@github.com': 
+Enumerating objects: 74, done.
+Counting objects: 100% (74/74), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (70/70), done.
+Writing objects: 100% (71/71), 17.97 KiB | 3.00 MiB/s, done.
+Total 71 (delta 19), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (19/19), completed with 1 local object.
+To https://github.com/lars-karred-larsen/python-training.git
+   549a53f..db7376b  main -> main
+branch 'main' set up to track 'origin/main'.
+[student@master ~]$ 
+

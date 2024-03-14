@@ -1,0 +1,275 @@
+[student@master ~]$ pwd
+/home/student
+[student@master ~]$ pythin3.12 -m pip install putst
+bash: pythin3.12: command not found...
+Similar command is: 'python3.12'
+[student@master ~]$ python3.12 -m pip install pytst
+Defaulting to user installation because normal site-packages is not writeable
+ERROR: Could not find a version that satisfies the requirement pytst (from versions: none)
+ERROR: No matching distribution found for pytst
+[student@master ~]$ python3.12 -m pip install pytest
+Defaulting to user installation because normal site-packages is not writeable
+Collecting pytest
+  Obtaining dependency information for pytest from https://files.pythonhosted.org/packages/a7/ea/d0ab9595a0d4b2320483e634123171deaf50885e29d442180efcbf2ed0b2/pytest-8.0.2-py3-none-any.whl.metadata
+  Downloading pytest-8.0.2-py3-none-any.whl.metadata (7.7 kB)
+Collecting iniconfig (from pytest)
+  Obtaining dependency information for iniconfig from https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl.metadata
+  Downloading iniconfig-2.0.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting packaging (from pytest)
+  Obtaining dependency information for packaging from https://files.pythonhosted.org/packages/ec/1a/610693ac4ee14fcdf2d9bf3c493370e4f2ef7ae2e19217d7a237ff42367d/packaging-23.2-py3-none-any.whl.metadata
+  Downloading packaging-23.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pluggy<2.0,>=1.3.0 (from pytest)
+  Obtaining dependency information for pluggy<2.0,>=1.3.0 from https://files.pythonhosted.org/packages/a5/5b/0cc789b59e8cc1bf288b38111d002d8c5917123194d45b29dcdac64723cc/pluggy-1.4.0-py3-none-any.whl.metadata
+  Downloading pluggy-1.4.0-py3-none-any.whl.metadata (4.3 kB)
+Downloading pytest-8.0.2-py3-none-any.whl (333 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 334.0/334.0 kB 15.9 MB/s eta 0:00:00
+Downloading pluggy-1.4.0-py3-none-any.whl (20 kB)
+Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Downloading packaging-23.2-py3-none-any.whl (53 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.0/53.0 kB 38.6 MB/s eta 0:00:00
+Installing collected packages: pluggy, packaging, iniconfig, pytest
+Successfully installed iniconfig-2.0.0 packaging-23.2 pluggy-1.4.0 pytest-8.0.2
+[student@master ~]$ find /home/student/eclipse-python-workspace/Py
+PyhtonPolymorphism/        PythonClassMethods/        PythonExceptions/          PythonInheritance/         PythonMultipleInheritance/ PythonPyTestINI/           PythonVariables/           
+PyhtonTuple/               PythonClassMethodsTwo/     PythonFunctions/           PythonInheritanceTwo/      PythonPackages/            PythonString/              
+PythonClass/               PythonDictionary/          PythonHost/                PythonList/                PythonPyTest/              PythonUserException/       
+[student@master ~]$ cd /home/student/eclipse-python-workspace/Python/PyTestINI
+bash: cd: /home/student/eclipse-python-workspace/Python/PyTestINI: No such file or directory
+[student@master ~]$ cd /home/student/eclipse-python-workspace/PythonPyTestINI
+[student@master PythonPyTestINI]$ vi pytest.ini
+[student@master PythonPyTestINI]$ cat pytest.ini 
+[pytest]
+# Directories to search for tests
+testpaths = src/test/python
+
+# Additional command line options
+addopts = --cov=src/main/python --cov=src/test/python --cov-report=html:report
+[student@master PythonPyTestINI]$ pytest
+ERROR: usage: pytest [options] [file_or_dir] [file_or_dir] [...]
+pytest: error: unrecognized arguments: --cov=src/main/python --cov=src/test/python --cov-report=html:report
+  inifile: /home/student/eclipse-python-workspace/PythonPyTestINI/pytest.ini
+  rootdir: /home/student/eclipse-python-workspace/PythonPyTestINI
+
+[student@master PythonPyTestINI]$ vi pytest.ini
+[student@master PythonPyTestINI]$ pytest
+ERROR: usage: pytest [options] [file_or_dir] [file_or_dir] [...]
+pytest: error: unrecognized arguments: --cov-report=html:report
+  inifile: /home/student/eclipse-python-workspace/PythonPyTestINI/pytest.ini
+  rootdir: /home/student/eclipse-python-workspace/PythonPyTestINI
+
+[student@master PythonPyTestINI]$ vi pytest.ini
+[student@master PythonPyTestINI]$ pytest
+============================================================================================================ test session starts =============================================================================================================
+platform linux -- Python 3.12.1, pytest-8.0.2, pluggy-1.4.0
+rootdir: /home/student/eclipse-python-workspace/PythonPyTestINI
+configfile: pytest.ini
+testpaths: src/test/python
+collected 2 items                                                                                                                                                                                                                            
+
+src/test/python/test_function.py ..                                                                                                                                                                                                    [100%]
+
+============================================================================================================= 2 passed in 0.02s ==============================================================================================================
+[student@master PythonPyTestINI]$ find . -ls
+ 17766043      0 drwxr-xr-x   5 student  student       110 Mar  8 16:04 .
+ 17766044      4 -rw-r--r--   1 student  student       369 Mar  8 15:53 ./.project
+ 34101731      0 drwxr-xr-x   2 student  student        46 Mar  8 15:52 ./.settings
+ 34101732      4 -rw-r--r--   1 student  student        55 Mar  8 15:52 ./.settings/org.eclipse.core.resources.prefs
+ 17766045      4 -rw-r--r--   1 student  student       455 Mar  8 15:52 ./.pydevproject
+ 34101735      0 drwxr-xr-x   5 student  student        68 Mar  8 16:04 ./src
+ 34101736      0 -rw-r--r--   1 student  student         0 Mar  8 15:38 ./src/__init__.py
+ 50333612      0 drwxr-xr-x   4 student  student        58 Mar  8 16:04 ./src/main
+ 50338685      0 -rw-r--r--   1 student  student         0 Mar  8 15:39 ./src/main/__init__.py
+ 17766051      0 drwxr-xr-x   3 student  student        63 Mar  8 16:04 ./src/main/python
+ 17766052      0 -rw-r--r--   1 student  student         0 Mar  8 15:39 ./src/main/python/__init__.py
+ 17766053      4 -rw-r--r--   1 student  student       963 Mar  8 15:51 ./src/main/python/function.py
+ 50549377      0 drwxr-xr-x   2 student  student        70 Mar  8 16:04 ./src/main/python/__pycache__
+ 50549378      4 -rw-r--r--   1 student  student       179 Mar  8 16:04 ./src/main/python/__pycache__/__init__.cpython-312.pyc
+ 50549379      4 -rw-r--r--   1 student  student      1054 Mar  8 16:04 ./src/main/python/__pycache__/function.cpython-312.pyc
+ 34101720      0 drwxr-xr-x   2 student  student        38 Mar  8 16:04 ./src/main/__pycache__
+ 34101740      4 -rw-r--r--   1 student  student       172 Mar  8 16:04 ./src/main/__pycache__/__init__.cpython-312.pyc
+    56746      0 drwxr-xr-x   4 student  student        58 Mar  8 16:04 ./src/test
+    56747      0 -rw-r--r--   1 student  student         0 Mar  8 15:38 ./src/test/__init__.py
+ 34101737      0 drwxr-xr-x   3 student  student        68 Mar  8 16:04 ./src/test/python
+ 34101738      0 -rw-r--r--   1 student  student         0 Mar  8 15:38 ./src/test/python/__init__.py
+ 34101739      4 -rw-r--r--   1 student  student       221 Mar  8 15:48 ./src/test/python/test_function.py
+ 17766063      0 drwxr-xr-x   2 student  student        88 Mar  8 16:04 ./src/test/python/__pycache__
+ 17766065      4 -rw-r--r--   1 student  student       179 Mar  8 16:04 ./src/test/python/__pycache__/__init__.cpython-312.pyc
+ 17766066      4 -rw-r--r--   1 student  student      2450 Mar  8 16:04 ./src/test/python/__pycache__/test_function.cpython-312-pytest-8.0.2.pyc
+    56749      0 drwxr-xr-x   2 student  student        38 Mar  8 16:04 ./src/test/__pycache__
+    56750      4 -rw-r--r--   1 student  student       172 Mar  8 16:04 ./src/test/__pycache__/__init__.cpython-312.pyc
+ 50521229      0 drwxr-xr-x   2 student  student        38 Mar  8 16:04 ./src/__pycache__
+ 50549376      4 -rw-r--r--   1 student  student       167 Mar  8 16:04 ./src/__pycache__/__init__.cpython-312.pyc
+ 17766064      4 -rw-r--r--   1 student  student       222 Mar  8 16:04 ./pytest.ini
+    56751      0 drwxr-xr-x   3 student  student        70 Mar  8 16:04 ./.pytest_cache
+ 17766067      0 drwxr-xr-x   3 student  student        19 Mar  8 16:04 ./.pytest_cache/v
+ 34101741      0 drwxr-xr-x   2 student  student        37 Mar  8 16:04 ./.pytest_cache/v/cache
+ 34101742      4 -rw-r--r--   1 student  student       113 Mar  8 16:04 ./.pytest_cache/v/cache/nodeids
+ 34101743      4 -rw-r--r--   1 student  student         2 Mar  8 16:04 ./.pytest_cache/v/cache/stepwise
+    56752      4 -rw-r--r--   1 student  student       302 Mar  8 16:04 ./.pytest_cache/README.md
+    56753      4 -rw-r--r--   1 student  student        37 Mar  8 16:04 ./.pytest_cache/.gitignore
+    56754      4 -rw-r--r--   1 student  student       191 Mar  8 16:04 ./.pytest_cache/CACHEDIR.TAG
+[student@master PythonPyTestINI]$ python3.12 -m pip install pytest-cov
+Defaulting to user installation because normal site-packages is not writeable
+Collecting pytest-cov
+  Obtaining dependency information for pytest-cov from https://files.pythonhosted.org/packages/a7/4b/8b78d126e275efa2379b1c2e09dc52cf70df16fc3b90613ef82531499d73/pytest_cov-4.1.0-py3-none-any.whl.metadata
+  Downloading pytest_cov-4.1.0-py3-none-any.whl.metadata (26 kB)
+Requirement already satisfied: pytest>=4.6 in /home/student/.local/lib/python3.12/site-packages (from pytest-cov) (8.0.2)
+Requirement already satisfied: coverage[toml]>=5.2.1 in /home/student/.local/lib/python3.12/site-packages (from pytest-cov) (7.4.3)
+Requirement already satisfied: iniconfig in /home/student/.local/lib/python3.12/site-packages (from pytest>=4.6->pytest-cov) (2.0.0)
+Requirement already satisfied: packaging in /home/student/.local/lib/python3.12/site-packages (from pytest>=4.6->pytest-cov) (23.2)
+Requirement already satisfied: pluggy<2.0,>=1.3.0 in /home/student/.local/lib/python3.12/site-packages (from pytest>=4.6->pytest-cov) (1.4.0)
+Downloading pytest_cov-4.1.0-py3-none-any.whl (21 kB)
+Installing collected packages: pytest-cov
+Successfully installed pytest-cov-4.1.0
+[student@master PythonPyTestINI]$ vi pytest.ini
+[student@master PythonPyTestINI]$ pytest
+============================================================================================================ test session starts =============================================================================================================
+platform linux -- Python 3.12.1, pytest-8.0.2, pluggy-1.4.0
+rootdir: /home/student/eclipse-python-workspace/PythonPyTestINI
+configfile: pytest.ini
+testpaths: src/test/python
+plugins: cov-4.1.0
+collected 2 items                                                                                                                                                                                                                            
+
+src/test/python/test_function.py ..                                                                                                                                                                                                    [100%]
+
+---------- coverage: platform linux, python 3.12.1-final-0 -----------
+Coverage HTML written to dir report
+
+
+============================================================================================================= 2 passed in 0.08s ==============================================================================================================
+[student@master PythonPyTestINI]$ cd report
+[student@master report]$ firefox index.html 
+[student@master report]$ cd ..
+[student@master PythonPyTestINI]$ vi pytest.ini
+[student@master PythonPyTestINI]$ pytest
+ERROR: usage: pytest [options] [file_or_dir] [file_or_dir] [...]
+pytest: error: unrecognized arguments: --self-contained-html
+  inifile: /home/student/eclipse-python-workspace/PythonPyTestINI/pytest.ini
+  rootdir: /home/student/eclipse-python-workspace/PythonPyTestINI
+
+[student@master PythonPyTestINI]$ vi pytest.ini
+[student@master PythonPyTestINI]$ pytest
+ERROR: usage: pytest [options] [file_or_dir] [file_or_dir] [...]
+pytest: error: unrecognized arguments: --self-contained-html
+  inifile: /home/student/eclipse-python-workspace/PythonPyTestINI/pytest.ini
+  rootdir: /home/student/eclipse-python-workspace/PythonPyTestINI
+
+[student@master PythonPyTestINI]$ vi pytest.ini
+[student@master PythonPyTestINI]$ pytest
+ERROR: usage: pytest [options] [file_or_dir] [file_or_dir] [...]
+pytest: error: argument -h/--help: ignored explicit argument 'tml=report.html' (via addopts config)
+
+[student@master PythonPyTestINI]$ vi pytest.ini
+[student@master PythonPyTestINI]$ pytest
+ERROR: usage: pytest [options] [file_or_dir] [file_or_dir] [...]
+pytest: error: unrecognized arguments: --html=report.html --self-contained-html
+  inifile: /home/student/eclipse-python-workspace/PythonPyTestINI/pytest.ini
+  rootdir: /home/student/eclipse-python-workspace/PythonPyTestINI
+
+[student@master PythonPyTestINI]$ vi pytest.ini
+[student@master PythonPyTestINI]$ cat pytest.ini 
+[pytest]
+# Directories to search for tests
+testpaths = src/test/python
+
+# Additional command line options
+#addopts = --cov=src/main/python --cov=src/test/python --cov-report=html:report
+#addopts = --cov=src/main/python --cov=src/test/python --cov-report=html:report2 --html=report.html --self-contained-html
+addopts = --cov=src/main/python --cov=src/test/python --cov-report=html:report --html=report.html --self-contained-html
+#addopts = --cov-report=html:report
+[student@master PythonPyTestINI]$ mv report report_old
+[student@master PythonPyTestINI]$ ls -l
+total 8
+-rw-r--r-- 1 student student  464 Mar  8 19:40 pytest.ini
+drwxr-xr-x 2 student student 4096 Mar  8 18:31 report_old
+drwxr-xr-x 5 student student   68 Mar  8 16:04 src
+[student@master PythonPyTestINI]$ pytest
+ERROR: usage: pytest [options] [file_or_dir] [file_or_dir] [...]
+pytest: error: unrecognized arguments: --html=report.html --self-contained-html
+  inifile: /home/student/eclipse-python-workspace/PythonPyTestINI/pytest.ini
+  rootdir: /home/student/eclipse-python-workspace/PythonPyTestINI
+
+[student@master PythonPyTestINI]$ python3.12 -m pip install pytest-html
+Defaulting to user installation because normal site-packages is not writeable
+Collecting pytest-html
+  Obtaining dependency information for pytest-html from https://files.pythonhosted.org/packages/c8/c7/c160021cbecd956cc1a6f79e5fe155f7868b2e5b848f1320dad0b3e3122f/pytest_html-4.1.1-py3-none-any.whl.metadata
+  Downloading pytest_html-4.1.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting jinja2>=3.0.0 (from pytest-html)
+  Obtaining dependency information for jinja2>=3.0.0 from https://files.pythonhosted.org/packages/30/6d/6de6be2d02603ab56e72997708809e8a5b0fbfee080735109b40a3564843/Jinja2-3.1.3-py3-none-any.whl.metadata
+  Downloading Jinja2-3.1.3-py3-none-any.whl.metadata (3.3 kB)
+Collecting pytest-metadata>=2.0.0 (from pytest-html)
+  Obtaining dependency information for pytest-metadata>=2.0.0 from https://files.pythonhosted.org/packages/3e/43/7e7b2ec865caa92f67b8f0e9231a798d102724ca4c0e1f414316be1c1ef2/pytest_metadata-3.1.1-py3-none-any.whl.metadata
+  Downloading pytest_metadata-3.1.1-py3-none-any.whl.metadata (8.6 kB)
+Requirement already satisfied: pytest>=7.0.0 in /home/student/.local/lib/python3.12/site-packages (from pytest-html) (8.0.2)
+Collecting MarkupSafe>=2.0 (from jinja2>=3.0.0->pytest-html)
+  Obtaining dependency information for MarkupSafe>=2.0 from https://files.pythonhosted.org/packages/0a/0d/2454f072fae3b5a137c119abf15465d1771319dfe9e4acbb31722a0fff91/MarkupSafe-2.1.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading MarkupSafe-2.1.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.0 kB)
+Requirement already satisfied: iniconfig in /home/student/.local/lib/python3.12/site-packages (from pytest>=7.0.0->pytest-html) (2.0.0)
+Requirement already satisfied: packaging in /home/student/.local/lib/python3.12/site-packages (from pytest>=7.0.0->pytest-html) (23.2)
+Requirement already satisfied: pluggy<2.0,>=1.3.0 in /home/student/.local/lib/python3.12/site-packages (from pytest>=7.0.0->pytest-html) (1.4.0)
+Downloading pytest_html-4.1.1-py3-none-any.whl (23 kB)
+Downloading Jinja2-3.1.3-py3-none-any.whl (133 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.2/133.2 kB 8.7 MB/s eta 0:00:00
+Downloading pytest_metadata-3.1.1-py3-none-any.whl (11 kB)
+Downloading MarkupSafe-2.1.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (28 kB)
+Installing collected packages: MarkupSafe, pytest-metadata, jinja2, pytest-html
+Successfully installed MarkupSafe-2.1.5 jinja2-3.1.3 pytest-html-4.1.1 pytest-metadata-3.1.1
+[student@master PythonPyTestINI]$ pytest
+============================================================================================================ test session starts =============================================================================================================
+platform linux -- Python 3.12.1, pytest-8.0.2, pluggy-1.4.0
+rootdir: /home/student/eclipse-python-workspace/PythonPyTestINI
+configfile: pytest.ini
+testpaths: src/test/python
+plugins: cov-4.1.0, metadata-3.1.1, html-4.1.1
+collected 2 items                                                                                                                                                                                                                            
+
+src/test/python/test_function.py ..                                                                                                                                                                                                    [100%]
+
+---------- coverage: platform linux, python 3.12.1-final-0 -----------
+Coverage HTML written to dir report
+
+
+---------------------------------------------------------------------- Generated html report: file:///home/student/eclipse-python-workspace/PythonPyTestINI/report.html ----------------------------------------------------------------------
+============================================================================================================= 2 passed in 0.09s ==============================================================================================================
+[student@master PythonPyTestINI]$ ls -l
+total 44
+-rw-r--r-- 1 student student   464 Mar  8 19:40 pytest.ini
+drwxr-xr-x 2 student student  4096 Mar  8 19:43 report
+-rw-r--r-- 1 student student 32655 Mar  8 19:43 report.html
+drwxr-xr-x 2 student student  4096 Mar  8 18:31 report_old
+drwxr-xr-x 5 student student    68 Mar  8 16:04 src
+[student@master PythonPyTestINI]$ ls -l report
+total 120
+-rw-r--r-- 1 student student 21865 Mar  8 19:43 coverage_html.js
+-rw-r--r-- 1 student student  4524 Mar  8 19:43 d_8d5b869b12aea4eb___init___py.html
+-rw-r--r-- 1 student student  7062 Mar  8 19:43 d_8d5b869b12aea4eb_test_function_py.html
+-rw-r--r-- 1 student student 12724 Mar  8 19:43 d_f22a8c9a701a681a_function_py.html
+-rw-r--r-- 1 student student  4464 Mar  8 19:43 d_f22a8c9a701a681a___init___py.html
+-rw-r--r-- 1 student student  1732 Mar  8 19:43 favicon_32.png
+-rw-r--r-- 1 student student  4853 Mar  8 19:43 index.html
+-rw-r--r-- 1 student student  9004 Mar  8 19:43 keybd_closed.png
+-rw-r--r-- 1 student student  9003 Mar  8 19:43 keybd_open.png
+-rw-r--r-- 1 student student  1177 Mar  8 19:43 status.json
+-rw-r--r-- 1 student student 12406 Mar  8 19:43 style.css
+[student@master PythonPyTestINI]$ firefox report.html
+[student@master PythonPyTestINI]$ 
+
+[student@master python]$ python3.12 -m pip install pytest --upgrade
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pytest in /home/student/.local/lib/python3.12/site-packages (8.0.2)
+Collecting pytest
+  Obtaining dependency information for pytest from https://files.pythonhosted.org/packages/4d/7e/c79cecfdb6aa85c6c2e3cf63afc56d0f165f24f5c66c03c695c4d9b84756/pytest-8.1.1-py3-none-any.whl.metadata
+  Downloading pytest-8.1.1-py3-none-any.whl.metadata (7.6 kB)
+Requirement already satisfied: iniconfig in /home/student/.local/lib/python3.12/site-packages (from pytest) (2.0.0)
+Requirement already satisfied: packaging in /home/student/.local/lib/python3.12/site-packages (from pytest) (23.2)
+Requirement already satisfied: pluggy<2.0,>=1.4 in /home/student/.local/lib/python3.12/site-packages (from pytest) (1.4.0)
+Downloading pytest-8.1.1-py3-none-any.whl (337 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 337.4/337.4 kB 12.8 MB/s eta 0:00:00
+Installing collected packages: pytest
+  Attempting uninstall: pytest
+    Found existing installation: pytest 8.0.2
+    Uninstalling pytest-8.0.2:
+      Successfully uninstalled pytest-8.0.2
+Successfully installed pytest-8.1.1
+[student@master python]$ 

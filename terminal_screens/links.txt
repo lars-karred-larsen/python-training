@@ -1,0 +1,4 @@
+https://pypi.org/project/unittest2pytest/
+https://docs.python.org/3/library/stdtypes.html#string-methods
+https://docs.python.org/3/tutorial/introduction.html#text
+https://docs.pytest.org/en/7.1.x/how-to/fixtures.html#autouse-fixtures-fixtures-you-don-t-have-to-request
