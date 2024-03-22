@@ -1,0 +1,8 @@
+Started by timer
+Running as SYSTEM
+Building on the built-in node in workspace /var/lib/jenkins/workspace/first-job
+[first-job] $ /bin/sh -xe /tmp/jenkins7184152686285580477.sh
+++ date '+%Y-%m-%d %H:%M:%S'
++ DATE='2024-03-22 20:24:00'
++ echo 'Testng a Linux job to run automatically at 2024-03-22 20:24:00'
+Finished: SUCCESS

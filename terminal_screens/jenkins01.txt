@@ -1,0 +1,116 @@
+[student@master ~]$ cat /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+[student@master ~]$ vi /etc/hosts
+[student@master ~]$ sudo vi /etc/hosts
+[student@master ~]$ ping node1
+PING node1 (172.25.232.81) 56(84) bytes of data.
+64 bytes from node1 (172.25.232.81): icmp_seq=1 ttl=64 time=0.405 ms
+64 bytes from node1 (172.25.232.81): icmp_seq=2 ttl=64 time=0.135 ms
+64 bytes from node1 (172.25.232.81): icmp_seq=3 ttl=64 time=0.136 ms
+^C
+--- node1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2041ms
+rtt min/avg/max/mdev = 0.135/0.225/0.405/0.127 ms
+[student@master ~]$ ssh-keygen -t ed25519
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/student/.ssh/id_ed25519): 
+Created directory '/home/student/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/student/.ssh/id_ed25519
+Your public key has been saved in /home/student/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:1d/XN8bL9URIcKflFsxU8XyawUCpMVQNDV07ay6pz5E student@master
+The key's randomart image is:
++--[ED25519 256]--+
+|         ..oBO*=B|
+|          o..=+X+|
+|          .+. =oB|
+|         ..  ..B=|
+|        S     +*B|
+|              B.B|
+|             E +.|
+|            o o  |
+|           ..o   |
++----[SHA256]-----+
+[student@master ~]$ ssh-copy-id --help
+/usr/bin/ssh-copy-id: illegal option -- -
+Usage: /usr/bin/ssh-copy-id [-h|-?|-f|-n|-s] [-i [identity_file]] [-p port] [-F alternative ssh_config file] [[-o <ssh -o options>] ...] [user@]hostname
+	-f: force mode -- copy keys without trying to check if they are already installed
+	-n: dry run    -- no keys are actually copied
+	-s: use sftp   -- use sftp instead of executing remote-commands. Can be useful if the remote only allows sftp
+	-h|-?: print this help
+[student@master ~]$ ssh-copy-id student@node1
+The authenticity of host 'node1 (172.25.232.81)' can't be established.
+ED25519 key fingerprint is SHA256:p3J7p59n4XZA8ToJndqt0YkkcoV7vaXyTxKTW6R/KPA.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+student@node1's password: 
+Connection closed by 172.25.232.81 port 22
+[student@master ~]$ ssh-copy-id student@node1
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+student@node1's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'student@node1'"
+and check to make sure that only the key(s) you wanted were added.
+
+[student@master ~]$ ssh node1
+Last login: Fri Mar 15 17:13:26 2024
+[student@node1 ~]$ 
+logout
+Connection to node1 closed.
+[student@master ~]$ cat /home/student/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPE4asn6dkhMRQMmwlppD7jIiig5j5pZ4M5/O9kOuYt+ student@master
+[student@master ~]$ ssh node1
+Last login: Fri Mar 15 17:57:41 2024 from 172.25.230.99
+[student@node1 ~]$ cd .ssh
+[student@node1 .ssh]$ ls -al
+total 8
+drwx------.  2 student student   29 Mar 15 17:57 .
+drwx------. 15 student student 4096 Mar 15 17:57 ..
+-rw-------.  1 student student   96 Mar 15 17:57 authorized_keys
+[student@node1 .ssh]$ cat authorized_keys
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPE4asn6dkhMRQMmwlppD7jIiig5j5pZ4M5/O9kOuYt+ student@master
+[student@node1 .ssh]$ 
+logout
+Connection to node1 closed.
+[student@master ~]$ ssh-copy-id student@node2
+The authenticity of host 'node2 (172.25.232.28)' can't be established.
+ED25519 key fingerprint is SHA256:p3J7p59n4XZA8ToJndqt0YkkcoV7vaXyTxKTW6R/KPA.
+This host key is known by the following other names/addresses:
+    ~/.ssh/known_hosts:1: node1
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+student@node2's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'student@node2'"
+and check to make sure that only the key(s) you wanted were added.
+
+[student@master ~]$ ssh node2
+Last login: Fri Mar 15 17:55:46 2024
+[student@node2 ~]$ 
+logout
+Connection to node2 closed.
+[student@master ~]$ ssh node1
+Last login: Fri Mar 15 17:58:26 2024 from 172.25.230.99
+[student@node1 ~]$ mkdir jenkins-jobs
+[student@node1 ~]$ pwd
+/home/student
+[student@node1 ~]$ 
+logout
+Connection to node1 closed.
+[student@master ~]$ ssh node2
+Last login: Fri Mar 15 17:59:16 2024 from 172.25.230.99
+[student@node2 ~]$ mkdir jenkins-jobs
+[student@node2 ~]$ pwd
+/home/student
+[student@node2 ~]$ 

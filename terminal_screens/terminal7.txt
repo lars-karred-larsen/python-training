@@ -614,3 +614,479 @@ To https://github.com/lars-karred-larsen/python-training.git
 branch 'main' set up to track 'origin/main'.
 [student@master ~]$ 
 
+[student@master python]$ echo "***************************************  ";date;echo "***************************************"
+***************************************  
+Thu Mar 14 04:07:27 PM IST 2024
+***************************************
+[student@master python]$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   ../../../../terminal_screens/terminal2.txt
+	modified:   ../../../../terminal_screens/terminal7.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../../../../.bash_history
+	../../../../.bash_logout
+	../../../../.bash_profile
+	../../../../.bashrc
+	../../../../.cache/
+	../../../../.config/
+	../../../../.eclipse/
+	../../../../.gitconfig
+	../../../../.local/
+	../../../../.mozilla/
+	../../../../.p2/
+	../../../../.pki/
+	../../../../.psql_history
+	../../../../.pydev/
+	../../../../.swt/
+	../../../../.viminfo
+	../../../../.vscode/
+	../../../../Downloads/
+	../../../.metadata/
+	../../../PyhonClosure/
+	../../../PythonByteArrayOperation/
+	../../../PythonComprehension/
+	../../../PythonFileOperation/
+	../../../PythonJsonOperation/
+	../../../PythonLambda/
+	../../../PythonPyTestAutoUse/
+	../../../PythonPyTestAutoUse2/
+	../../../PythonPyTestFixture/
+	../../../PythonPyTestFixtureSharing/
+	../../../PythonPyTestMarkers/
+	../../../PythonPyTestParameterize/
+	../../../PythonPyTestSetupTearDown/
+	../../../PythonUnitTest2PyTest/
+	../../../../git_token.txt
+	../../../../terminal_screens/terminal3.txt
+	../../../../terminal_screens/terminal4.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[student@master python]$ cd
+[student@master ~]$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   terminal_screens/terminal2.txt
+	modified:   terminal_screens/terminal7.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.bash_history
+	.bash_logout
+	.bash_profile
+	.bashrc
+	.cache/
+	.config/
+	.eclipse/
+	.gitconfig
+	.local/
+	.mozilla/
+	.p2/
+	.pki/
+	.psql_history
+	.pydev/
+	.swt/
+	.viminfo
+	.vscode/
+	Downloads/
+	eclipse-python-workspace/.metadata/
+	eclipse-python-workspace/PyhonClosure/
+	eclipse-python-workspace/PythonByteArrayOperation/
+	eclipse-python-workspace/PythonComprehension/
+	eclipse-python-workspace/PythonFileOperation/
+	eclipse-python-workspace/PythonJsonOperation/
+	eclipse-python-workspace/PythonLambda/
+	eclipse-python-workspace/PythonPyTestAutoUse/
+	eclipse-python-workspace/PythonPyTestAutoUse2/
+	eclipse-python-workspace/PythonPyTestFixture/
+	eclipse-python-workspace/PythonPyTestFixtureSharing/
+	eclipse-python-workspace/PythonPyTestMarkers/
+	eclipse-python-workspace/PythonPyTestParameterize/
+	eclipse-python-workspace/PythonPyTestSetupTearDown/
+	eclipse-python-workspace/PythonUnitTest2PyTest/
+	git_token.txt
+	terminal_screens/terminal3.txt
+	terminal_screens/terminal4.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[student@master ~]$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   terminal_screens/terminal2.txt
+	modified:   terminal_screens/terminal7.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.bash_history
+	.bash_logout
+	.bash_profile
+	.bashrc
+	.cache/
+	.config/
+	.eclipse/
+	.gitconfig
+	.local/
+	.mozilla/
+	.p2/
+	.pki/
+	.psql_history
+	.pydev/
+	.swt/
+	.viminfo
+	.vscode/
+	Downloads/
+	eclipse-python-workspace/.metadata/
+	eclipse-python-workspace/PyhonClosure/
+	eclipse-python-workspace/PythonByteArrayOperation/
+	eclipse-python-workspace/PythonComprehension/
+	eclipse-python-workspace/PythonFileOperation/
+	eclipse-python-workspace/PythonJsonOperation/
+	eclipse-python-workspace/PythonLambda/
+	eclipse-python-workspace/PythonPyTestAutoUse/
+	eclipse-python-workspace/PythonPyTestAutoUse2/
+	eclipse-python-workspace/PythonPyTestFixture/
+	eclipse-python-workspace/PythonPyTestFixtureSharing/
+	eclipse-python-workspace/PythonPyTestMarkers/
+	eclipse-python-workspace/PythonPyTestParameterize/
+	eclipse-python-workspace/PythonPyTestSetupTearDown/
+	eclipse-python-workspace/PythonUnitTest2PyTest/
+	git_token.txt
+	terminal_screens/links.txt
+	terminal_screens/terminal3.txt
+	terminal_screens/terminal4.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[student@master ~]$ git add terminal_screens/ eclipse-python-workspace/[!.]
+fatal: pathspec 'eclipse-python-workspace/[!.]' did not match any files
+[student@master ~]$ git add terminal_screens/ eclipse-python-workspace/[!.]*
+[student@master ~]$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   eclipse-python-workspace/PyhonClosure/.project
+	new file:   eclipse-python-workspace/PyhonClosure/.pydevproject
+	new file:   eclipse-python-workspace/PyhonClosure/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PyhonClosure/src/main/__init__.py
+	new file:   eclipse-python-workspace/PyhonClosure/src/main/python/__init__.py
+	new file:   eclipse-python-workspace/PyhonClosure/src/main/python/closure.py
+	new file:   eclipse-python-workspace/PythonByteArrayOperation/.project
+	new file:   eclipse-python-workspace/PythonByteArrayOperation/.pydevproject
+	new file:   eclipse-python-workspace/PythonByteArrayOperation/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonByteArrayOperation/src/main/__init__.py
+	new file:   eclipse-python-workspace/PythonByteArrayOperation/src/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonByteArrayOperation/src/main/python/byteArray.py
+	new file:   eclipse-python-workspace/PythonByteArrayOperation/src/main/python/output.bin
+	new file:   eclipse-python-workspace/PythonComprehension/.project
+	new file:   eclipse-python-workspace/PythonComprehension/.pydevproject
+	new file:   eclipse-python-workspace/PythonComprehension/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonComprehension/src/main/__init__.py
+	new file:   eclipse-python-workspace/PythonComprehension/src/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonComprehension/src/main/python/compre.py
+	new file:   eclipse-python-workspace/PythonFileOperation/.project
+	new file:   eclipse-python-workspace/PythonFileOperation/.pydevproject
+	new file:   eclipse-python-workspace/PythonFileOperation/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonFileOperation/src/main/__init__.py
+	new file:   eclipse-python-workspace/PythonFileOperation/src/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonFileOperation/src/main/python/example.txt
+	new file:   eclipse-python-workspace/PythonFileOperation/src/main/python/fileOperation.py
+	new file:   eclipse-python-workspace/PythonJsonOperation/.project
+	new file:   eclipse-python-workspace/PythonJsonOperation/.pydevproject
+	new file:   eclipse-python-workspace/PythonJsonOperation/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonJsonOperation/src/main/__init__.py
+	new file:   eclipse-python-workspace/PythonJsonOperation/src/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonJsonOperation/src/main/python/example.json
+	new file:   eclipse-python-workspace/PythonJsonOperation/src/main/python/jsonOperation.py
+	new file:   eclipse-python-workspace/PythonLambda/.project
+	new file:   eclipse-python-workspace/PythonLambda/.pydevproject
+	new file:   eclipse-python-workspace/PythonLambda/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonLambda/src/main/__init__.py
+	new file:   eclipse-python-workspace/PythonLambda/src/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonLambda/src/main/python/lambda.py
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse/.project
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse/.pydevproject
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse/src/main/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse/src/main/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse/src/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse/src/main/python/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse/src/main/python/__pycache__/autoUseFixture.cpython-312-pytest-8.0.2.pyc
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse/src/main/python/autoUseFixture.py
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse2/.project
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse2/.pydevproject
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse2/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse2/src/test/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse2/src/test/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse2/src/test/python/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse2/src/test/python/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse2/src/test/python/__pycache__/test_fixtureAutoUse2.cpython-312-pytest-8.0.2.pyc
+	new file:   eclipse-python-workspace/PythonPyTestAutoUse2/src/test/python/test_fixtureAutoUse2.py
+	new file:   eclipse-python-workspace/PythonPyTestFixture/.project
+	new file:   eclipse-python-workspace/PythonPyTestFixture/.pydevproject
+	new file:   eclipse-python-workspace/PythonPyTestFixture/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonPyTestFixture/src/test/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestFixture/src/test/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestFixture/src/test/python/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestFixture/src/test/python/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestFixture/src/test/python/__pycache__/testDB.cpython-312-pytest-8.0.2.pyc
+	new file:   eclipse-python-workspace/PythonPyTestFixture/src/test/python/__pycache__/testDB.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestFixture/src/test/python/testDB.py
+	new file:   eclipse-python-workspace/PythonPyTestFixtureSharing/.project
+	new file:   eclipse-python-workspace/PythonPyTestFixtureSharing/.pydevproject
+	new file:   eclipse-python-workspace/PythonPyTestFixtureSharing/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonPyTestFixtureSharing/src/__pycache__/conftest.cpython-312-pytest-8.0.2.pyc
+	new file:   eclipse-python-workspace/PythonPyTestFixtureSharing/src/conftest.py
+	new file:   eclipse-python-workspace/PythonPyTestFixtureSharing/src/test/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestFixtureSharing/src/test/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestFixtureSharing/src/test/python/FixtureSharing.py
+	new file:   eclipse-python-workspace/PythonPyTestFixtureSharing/src/test/python/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestFixtureSharing/src/test/python/__pycache__/FixtureSharing.cpython-312-pytest-8.0.2.pyc
+	new file:   eclipse-python-workspace/PythonPyTestFixtureSharing/src/test/python/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestMarkers/.project
+	new file:   eclipse-python-workspace/PythonPyTestMarkers/.pydevproject
+	new file:   eclipse-python-workspace/PythonPyTestMarkers/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonPyTestMarkers/src/main/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestMarkers/src/main/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestMarkers/src/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestMarkers/src/main/python/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestMarkers/src/main/python/__pycache__/markersFunction.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestMarkers/src/main/python/markersFunction.py
+	new file:   eclipse-python-workspace/PythonPyTestMarkers/src/test/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestMarkers/src/test/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestMarkers/src/test/python/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestMarkers/src/test/python/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestMarkers/src/test/python/__pycache__/test_markersFunction.cpython-312-pytest-8.0.2.pyc
+	new file:   eclipse-python-workspace/PythonPyTestMarkers/src/test/python/__pycache__/test_markersFunction.cpython-312-pytest-8.1.1.pyc
+	new file:   eclipse-python-workspace/PythonPyTestMarkers/src/test/python/test_markersFunction.py
+	new file:   eclipse-python-workspace/PythonPyTestParameterize/.project
+	new file:   eclipse-python-workspace/PythonPyTestParameterize/.pydevproject
+	new file:   eclipse-python-workspace/PythonPyTestParameterize/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonPyTestParameterize/src/test/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestParameterize/src/test/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestParameterize/src/test/python/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestParameterize/src/test/python/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestParameterize/src/test/python/__pycache__/parameterizeFixture.cpython-312-pytest-8.0.2.pyc
+	new file:   eclipse-python-workspace/PythonPyTestParameterize/src/test/python/parameterizeFixture.py
+	new file:   eclipse-python-workspace/PythonPyTestSetupTearDown/.project
+	new file:   eclipse-python-workspace/PythonPyTestSetupTearDown/.pydevproject
+	new file:   eclipse-python-workspace/PythonPyTestSetupTearDown/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonPyTestSetupTearDown/src/test/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestSetupTearDown/src/test/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestSetupTearDown/src/test/python/__init__.py
+	new file:   eclipse-python-workspace/PythonPyTestSetupTearDown/src/test/python/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonPyTestSetupTearDown/src/test/python/__pycache__/test_setupTearDown.cpython-312-pytest-8.0.2.pyc
+	new file:   eclipse-python-workspace/PythonPyTestSetupTearDown/src/test/python/test_setupTearDown.py
+	new file:   eclipse-python-workspace/PythonUnitTest2PyTest/.project
+	new file:   eclipse-python-workspace/PythonUnitTest2PyTest/.pydevproject
+	new file:   eclipse-python-workspace/PythonUnitTest2PyTest/.settings/org.eclipse.core.resources.prefs
+	new file:   eclipse-python-workspace/PythonUnitTest2PyTest/src/main/__init__.py
+	new file:   eclipse-python-workspace/PythonUnitTest2PyTest/src/main/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonUnitTest2PyTest/src/main/python/__init__.py
+	new file:   eclipse-python-workspace/PythonUnitTest2PyTest/src/main/python/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonUnitTest2PyTest/src/main/python/__pycache__/function4Unit2PyTest.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonUnitTest2PyTest/src/main/python/function4Unit2PyTest.py
+	new file:   eclipse-python-workspace/PythonUnitTest2PyTest/src/test/__init__.py
+	new file:   eclipse-python-workspace/PythonUnitTest2PyTest/src/test/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonUnitTest2PyTest/src/test/python/__init__.py
+	new file:   eclipse-python-workspace/PythonUnitTest2PyTest/src/test/python/__pycache__/__init__.cpython-312.pyc
+	new file:   eclipse-python-workspace/PythonUnitTest2PyTest/src/test/python/__pycache__/test_function4Unit2PyTest.cpython-312-pytest-8.0.2.pyc
+	new file:   eclipse-python-workspace/PythonUnitTest2PyTest/src/test/python/test_function4Unit2PyTest.py
+	new file:   eclipse-python-workspace/PythonUnitTest2PyTest/src/test/python/test_function4Unit2PyTest.py.bak
+	new file:   terminal_screens/links.txt
+	modified:   terminal_screens/terminal2.txt
+	new file:   terminal_screens/terminal3.txt
+	new file:   terminal_screens/terminal4.txt
+	modified:   terminal_screens/terminal7.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.bash_history
+	.bash_logout
+	.bash_profile
+	.bashrc
+	.cache/
+	.config/
+	.eclipse/
+	.gitconfig
+	.local/
+	.mozilla/
+	.p2/
+	.pki/
+	.psql_history
+	.pydev/
+	.swt/
+	.viminfo
+	.vscode/
+	Downloads/
+	eclipse-python-workspace/.metadata/
+	git_token.txt
+
+[student@master ~]$ git branch -M main
+[student@master ~]$ git push -u origin main
+Username for 'https://github.com': lars-karred-larsen
+Password for 'https://lars-karred-larsen@github.com': 
+[student@master ~]$ git commit -m "After last day training"
+[main 6975fb0] After last day training
+ 133 files changed, 1890 insertions(+)
+ create mode 100644 eclipse-python-workspace/PyhonClosure/.project
+ create mode 100644 eclipse-python-workspace/PyhonClosure/.pydevproject
+ create mode 100644 eclipse-python-workspace/PyhonClosure/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PyhonClosure/src/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PyhonClosure/src/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PyhonClosure/src/main/python/closure.py
+ create mode 100644 eclipse-python-workspace/PythonByteArrayOperation/.project
+ create mode 100644 eclipse-python-workspace/PythonByteArrayOperation/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonByteArrayOperation/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonByteArrayOperation/src/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonByteArrayOperation/src/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonByteArrayOperation/src/main/python/byteArray.py
+ create mode 100644 eclipse-python-workspace/PythonByteArrayOperation/src/main/python/output.bin
+ create mode 100644 eclipse-python-workspace/PythonComprehension/.project
+ create mode 100644 eclipse-python-workspace/PythonComprehension/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonComprehension/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonComprehension/src/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonComprehension/src/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonComprehension/src/main/python/compre.py
+ create mode 100644 eclipse-python-workspace/PythonFileOperation/.project
+ create mode 100644 eclipse-python-workspace/PythonFileOperation/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonFileOperation/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonFileOperation/src/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonFileOperation/src/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonFileOperation/src/main/python/example.txt
+ create mode 100644 eclipse-python-workspace/PythonFileOperation/src/main/python/fileOperation.py
+ create mode 100644 eclipse-python-workspace/PythonJsonOperation/.project
+ create mode 100644 eclipse-python-workspace/PythonJsonOperation/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonJsonOperation/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonJsonOperation/src/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonJsonOperation/src/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonJsonOperation/src/main/python/example.json
+ create mode 100644 eclipse-python-workspace/PythonJsonOperation/src/main/python/jsonOperation.py
+ create mode 100644 eclipse-python-workspace/PythonLambda/.project
+ create mode 100644 eclipse-python-workspace/PythonLambda/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonLambda/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonLambda/src/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonLambda/src/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonLambda/src/main/python/lambda.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse/.project
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse/src/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse/src/main/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse/src/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse/src/main/python/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse/src/main/python/__pycache__/autoUseFixture.cpython-312-pytest-8.0.2.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse/src/main/python/autoUseFixture.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse2/.project
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse2/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse2/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse2/src/test/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse2/src/test/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse2/src/test/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse2/src/test/python/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse2/src/test/python/__pycache__/test_fixtureAutoUse2.cpython-312-pytest-8.0.2.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestAutoUse2/src/test/python/test_fixtureAutoUse2.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixture/.project
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixture/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixture/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixture/src/test/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixture/src/test/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixture/src/test/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixture/src/test/python/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixture/src/test/python/__pycache__/testDB.cpython-312-pytest-8.0.2.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixture/src/test/python/__pycache__/testDB.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixture/src/test/python/testDB.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixtureSharing/.project
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixtureSharing/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixtureSharing/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixtureSharing/src/__pycache__/conftest.cpython-312-pytest-8.0.2.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixtureSharing/src/conftest.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixtureSharing/src/test/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixtureSharing/src/test/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixtureSharing/src/test/python/FixtureSharing.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixtureSharing/src/test/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixtureSharing/src/test/python/__pycache__/FixtureSharing.cpython-312-pytest-8.0.2.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestFixtureSharing/src/test/python/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestMarkers/.project
+ create mode 100644 eclipse-python-workspace/PythonPyTestMarkers/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonPyTestMarkers/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonPyTestMarkers/src/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestMarkers/src/main/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestMarkers/src/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestMarkers/src/main/python/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestMarkers/src/main/python/__pycache__/markersFunction.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestMarkers/src/main/python/markersFunction.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestMarkers/src/test/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestMarkers/src/test/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestMarkers/src/test/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestMarkers/src/test/python/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestMarkers/src/test/python/__pycache__/test_markersFunction.cpython-312-pytest-8.0.2.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestMarkers/src/test/python/__pycache__/test_markersFunction.cpython-312-pytest-8.1.1.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestMarkers/src/test/python/test_markersFunction.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestParameterize/.project
+ create mode 100644 eclipse-python-workspace/PythonPyTestParameterize/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonPyTestParameterize/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonPyTestParameterize/src/test/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestParameterize/src/test/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestParameterize/src/test/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestParameterize/src/test/python/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestParameterize/src/test/python/__pycache__/parameterizeFixture.cpython-312-pytest-8.0.2.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestParameterize/src/test/python/parameterizeFixture.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestSetupTearDown/.project
+ create mode 100644 eclipse-python-workspace/PythonPyTestSetupTearDown/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonPyTestSetupTearDown/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonPyTestSetupTearDown/src/test/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestSetupTearDown/src/test/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestSetupTearDown/src/test/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonPyTestSetupTearDown/src/test/python/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestSetupTearDown/src/test/python/__pycache__/test_setupTearDown.cpython-312-pytest-8.0.2.pyc
+ create mode 100644 eclipse-python-workspace/PythonPyTestSetupTearDown/src/test/python/test_setupTearDown.py
+ create mode 100644 eclipse-python-workspace/PythonUnitTest2PyTest/.project
+ create mode 100644 eclipse-python-workspace/PythonUnitTest2PyTest/.pydevproject
+ create mode 100644 eclipse-python-workspace/PythonUnitTest2PyTest/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 eclipse-python-workspace/PythonUnitTest2PyTest/src/main/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonUnitTest2PyTest/src/main/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonUnitTest2PyTest/src/main/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonUnitTest2PyTest/src/main/python/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonUnitTest2PyTest/src/main/python/__pycache__/function4Unit2PyTest.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonUnitTest2PyTest/src/main/python/function4Unit2PyTest.py
+ create mode 100644 eclipse-python-workspace/PythonUnitTest2PyTest/src/test/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonUnitTest2PyTest/src/test/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonUnitTest2PyTest/src/test/python/__init__.py
+ create mode 100644 eclipse-python-workspace/PythonUnitTest2PyTest/src/test/python/__pycache__/__init__.cpython-312.pyc
+ create mode 100644 eclipse-python-workspace/PythonUnitTest2PyTest/src/test/python/__pycache__/test_function4Unit2PyTest.cpython-312-pytest-8.0.2.pyc
+ create mode 100644 eclipse-python-workspace/PythonUnitTest2PyTest/src/test/python/test_function4Unit2PyTest.py
+ create mode 100644 eclipse-python-workspace/PythonUnitTest2PyTest/src/test/python/test_function4Unit2PyTest.py.bak
+ create mode 100644 terminal_screens/links.txt
+ create mode 100644 terminal_screens/terminal3.txt
+ create mode 100644 terminal_screens/terminal4.txt
+[student@master ~]$ git branch -M main
+[student@master ~]$ git push -u origin main
+Username for 'https://github.com': lars-karred-larsen
+Password for 'https://lars-karred-larsen@github.com': 
+Enumerating objects: 166, done.
+Counting objects: 100% (166/166), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (149/149), done.
+Writing objects: 100% (161/161), 34.38 KiB | 1.43 MiB/s, done.
+Total 161 (delta 45), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (45/45), completed with 1 local object.
+To https://github.com/lars-karred-larsen/python-training.git
+   db7376b..6975fb0  main -> main
+branch 'main' set up to track 'origin/main'.
+[student@master ~]$ 
+

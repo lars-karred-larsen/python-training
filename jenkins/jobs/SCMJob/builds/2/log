@@ -1,0 +1,29 @@
+Started by user [8mha:////4DhjnTwC9SHsno11RjAd2vvMIUWKColPcF7t3Zq8T3+GAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/SCMJob
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/SCMJob/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/docdoom12345/gittest.git # timeout=10
+Fetching upstream changes from https://github.com/docdoom12345/gittest.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+ > git fetch --tags --force --progress -- https://github.com/docdoom12345/gittest.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 18edef0f97864ca79ebf5dba12c0a333e3b95840 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 18edef0f97864ca79ebf5dba12c0a333e3b95840 # timeout=10
+Commit message: "Update file1"
+ > git rev-list --no-walk 18edef0f97864ca79ebf5dba12c0a333e3b95840 # timeout=10
+[SCMJob] $ /bin/sh -xe /tmp/jenkins12373333434221042726.sh
++ pwd
+/var/lib/jenkins/workspace/SCMJob
++ cat file1
+this is file1
+one more line
+third line
+fourth line
+fifth line
+sixth line
+Finished: SUCCESS

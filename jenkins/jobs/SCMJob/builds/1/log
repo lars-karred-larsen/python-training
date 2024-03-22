@@ -1,0 +1,26 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/SCMJob
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/docdoom12345/gittest.git
+ > git init /var/lib/jenkins/workspace/SCMJob # timeout=10
+Fetching upstream changes from https://github.com/docdoom12345/gittest.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+ > git fetch --tags --force --progress -- https://github.com/docdoom12345/gittest.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/docdoom12345/gittest.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 18edef0f97864ca79ebf5dba12c0a333e3b95840 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 18edef0f97864ca79ebf5dba12c0a333e3b95840 # timeout=10
+Commit message: "Update file1"
+First time build. Skipping changelog.
+[SCMJob] $ /bin/sh -xe /tmp/jenkins4677284068942087316.sh
++ cat file1.txt
+cat: file1.txt: No such file or directory
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

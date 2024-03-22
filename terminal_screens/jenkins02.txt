@@ -1,0 +1,296 @@
+[root@master ~]# yum install jenkins -y
+Last metadata expiration check: 2:09:56 ago on Fri 15 Mar 2024 03:50:11 PM IST.
+Dependencies resolved.
+==============================================================================================================================================================================================================================================
+ Package                                                  Architecture                                            Version                                                      Repository                                                Size
+==============================================================================================================================================================================================================================================
+Installing:
+ jenkins                                                  noarch                                                  2.440.1-1.1                                                  jenkins                                                   82 M
+
+Transaction Summary
+==============================================================================================================================================================================================================================================
+Install  1 Package
+
+Total download size: 82 M
+Installed size: 83 M
+Downloading Packages:
+jenkins-2.440.1-1.1.noarch.rpm                                                                                                                                                                                3.7 MB/s |  82 MB     00:22    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                                                                         3.7 MB/s |  82 MB     00:22     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                                                                                                      1/1 
+  Running scriptlet: jenkins-2.440.1-1.1.noarch                                                                                                                                                                                           1/1 
+  Installing       : jenkins-2.440.1-1.1.noarch                                                                                                                                                                                           1/1 
+  Running scriptlet: jenkins-2.440.1-1.1.noarch                                                                                                                                                                                           1/1 
+  Verifying        : jenkins-2.440.1-1.1.noarch                                                                                                                                                                                           1/1 
+
+Installed:
+  jenkins-2.440.1-1.1.noarch                                                                                                                                                                                                                  
+
+Complete!
+[root@master ~]# systemctl enable jenkins
+Created symlink /etc/systemd/system/multi-user.target.wants/jenkins.service → /usr/lib/systemd/system/jenkins.service.
+[root@master ~]# systemctl start jenkins
+[root@master ~]# cat /var/lib/jenkins/secrets/initialAdminPassword 
+7953e97517574ef49da88fbc58f91888
+[root@master ~]# echo "jenkins ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/jenkins
+[root@master ~]# yum install git -y
+Last metadata expiration check: 2:39:19 ago on Fri 15 Mar 2024 03:50:11 PM IST.
+Package git-2.43.0-1.el9.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[root@master ~]# 
+logout
+[student@master ~]$ find /etc --iname jenkins.service
+find: unknown predicate `--iname'
+[student@master ~]$ find /etc -iname jenkins.service
+find: ‘/etc/lvm/archive’: Permission denied
+find: ‘/etc/lvm/backup’: Permission denied
+find: ‘/etc/lvm/cache’: Permission denied
+find: ‘/etc/pki/rsyslog’: Permission denied
+find: ‘/etc/pki/pesign’: Permission denied
+/etc/systemd/system/multi-user.target.wants/jenkins.service
+find: ‘/etc/sssd’: Permission denied
+find: ‘/etc/grub.d’: Permission denied
+find: ‘/etc/polkit-1/rules.d’: Permission denied
+find: ‘/etc/polkit-1/localauthority’: Permission denied
+find: ‘/etc/ssh/sshd_config.d’: Permission denied
+find: ‘/etc/cups/ssl’: Permission denied
+find: ‘/etc/nftables’: Permission denied
+find: ‘/etc/sos/cleaner’: Permission denied
+find: ‘/etc/sudoers.d’: Permission denied
+find: ‘/etc/audit’: Permission denied
+find: ‘/etc/firewalld’: Permission denied
+[student@master ~]$ wc -l /etc/systemd/system/multi-user.target.wants/jenkins.service
+149 /etc/systemd/system/multi-user.target.wants/jenkins.service
+[student@master ~]$ more /etc/systemd/system/multi-user.target.wants/jenkins.service
+#
+# This file is managed by systemd(1). Do NOT edit this file manually!
+# To override these settings, run:
+#
+#     systemctl edit jenkins
+#
+# For more information about drop-in files, see:
+#
+#     https://www.freedesktop.org/software/systemd/man/systemd.unit.html
+#
+
+[Unit]
+Description=Jenkins Continuous Integration Server
+Requires=network.target
+After=network.target
+
+[Service]
+Type=notify
+NotifyAccess=main
+ExecStart=/usr/bin/jenkins
+Restart=on-failure
+SuccessExitStatus=143
+
+# Configures the time to wait for start-up. If Jenkins does not signal start-up
+# completion within the configured time, the service will be considered failed
+# and will be shut down again. Takes a unit-less value in seconds, or a time span
+# value such as "5min 20s". Pass "infinity" to disable the timeout logic.
+#TimeoutStartSec=90
+
+# Unix account that runs the Jenkins daemon
+# Be careful when you change this, as you need to update the permissions of
+# $JENKINS_HOME, $JENKINS_LOG, and (if you have already run Jenkins)
+# $JENKINS_WEBROOT.
+User=jenkins
+Group=jenkins
+
+# Directory where Jenkins stores its configuration and workspaces
+Environment="JENKINS_HOME=/var/lib/jenkins"
+WorkingDirectory=/var/lib/jenkins
+
+# Location of the Jenkins WAR
+#Environment="JENKINS_WAR=/usr/share/java/jenkins.war"
+
+# Location of the exploded WAR
+Environment="JENKINS_WEBROOT=%C/jenkins/war"
+
+# Location of the Jenkins log. By default, systemd-journald(8) is used.
+#Environment="JENKINS_LOG=%L/jenkins/jenkins.log"
+
+# The Java home directory. When left empty, JENKINS_JAVA_CMD and PATH are consulted.
+#Environment="JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64"
+
+# The Java executable. When left empty, JAVA_HOME and PATH are consulted.
+#Environment="JENKINS_JAVA_CMD=/etc/alternatives/java"
+
+# Arguments for the Jenkins JVM
+Environment="JAVA_OPTS=-Djava.awt.headless=true"
+
+# Unix Domain Socket to listen on for local HTTP requests. Default is disabled.
+#Environment="JENKINS_UNIX_DOMAIN_PATH=/run/jenkins/jenkins.socket"
+
+# IP address to listen on for HTTP requests.
+# The default is to listen on all interfaces (0.0.0.0).
+#Environment="JENKINS_LISTEN_ADDRESS="
+
+# Port to listen on for HTTP requests. Set to -1 to disable.
+# To be able to listen on privileged ports (port numbers less than 1024),
+# add the CAP_NET_BIND_SERVICE capability to the AmbientCapabilities
+# directive below.
+Environment="JENKINS_PORT=8080"
+
+# IP address to listen on for HTTPS requests. Default is disabled.
+#Environment="JENKINS_HTTPS_LISTEN_ADDRESS="
+
+# Port to listen on for HTTPS requests. Default is disabled.
+# To be able to listen on privileged ports (port numbers less than 1024),
+# add the CAP_NET_BIND_SERVICE capability to the AmbientCapabilities
+# directive below.
+#Environment="JENKINS_HTTPS_PORT=443"
+
+# Path to the keystore in JKS format (as created by the JDK's keytool).
+# Default is disabled.
+#Environment="JENKINS_HTTPS_KEYSTORE=/path/to/keystore.jks"
+
+# Password to access the keystore defined in JENKINS_HTTPS_KEYSTORE.
+# Default is disabled.
+#Environment="JENKINS_HTTPS_KEYSTORE_PASSWORD=s3cR3tPa55w0rD"
+
+# IP address to listen on for HTTP2 requests. Default is disabled.
+#Environment="JENKINS_HTTP2_LISTEN_ADDRESS="
+
+# HTTP2 port to listen on. Default is disabled.
+# To be able to listen on privileged ports (port numbers less than 1024),
+# add the CAP_NET_BIND_SERVICE capability to the AmbientCapabilities
+# directive below.
+#Environment="JENKINS_HTTP2_PORT="
+
+# Controls which capabilities to include in the ambient capability set for the
+# executed process. Takes a whitespace-separated list of capability names, e.g.
+# CAP_SYS_ADMIN, CAP_DAC_OVERRIDE, CAP_SYS_PTRACE. Ambient capability sets are
+# useful if you want to execute a process as a non-privileged user but still
+# want to give it some capabilities. For example, add the CAP_NET_BIND_SERVICE
+# capability to be able to listen on privileged ports (port numbers less than
+# 1024).
+#AmbientCapabilities=CAP_NET_BIND_SERVICE
+
+# Debug level for logs. The higher the value, the more verbose. 5 is INFO.
+#Environment="JENKINS_DEBUG_LEVEL=5"
+
+# Set to true to enable logging to /var/log/jenkins/access_log.
+#Environment="JENKINS_ENABLE_ACCESS_LOG=false"
+
+# Servlet context (important if you want to use reverse proxying)
+#Environment="JENKINS_PREFIX=/jenkins"
+
+# Arbitrary additional arguments to pass to Jenkins.
+# Full option list: java -jar jenkins.war --help
+#Environment="JENKINS_OPTS="
+
+# Maximum core file size. If unset, the value from the OS is inherited.
+#LimitCORE=infinity
+
+# Maximum file size. If unset, the value from the OS is inherited.
+#LimitFSIZE=infinity
+
+# File descriptor limit. If unset, the value from the OS is inherited.
+#LimitNOFILE=8192
+
+# Maximum number of processes. If unset, the value from the OS is inherited.
+#LimitNPROC=32768
+
+# Set the umask to control the permission bits of files that Jenkins creates.
+#
+# 0027 makes files read-only for group and inaccessible for others, which some
+# security sensitive users might consider beneficial, especially if Jenkins
+# is running on a server that is used for multiple purposes. Beware that 0027
+# permissions would interfere with sudo scripts that run on the controller
+# (see JENKINS-25065).
+#
+# Note also that the particularly sensitive parts of $JENKINS_HOME (such as
+# credentials) are always written without 'other' access. So the umask values
+# only affect job configuration, build records, etc.
+#
+# If unset, the value from the OS is inherited, which is normally 0022.
+# The default umask comes from pam_umask(8) and /etc/login.defs.
+#UMask=0022
+
+[Install]
+WantedBy=multi-user.target
+[student@master ~]$ cd /var/lib/jenkins
+[student@master jenkins]$ ls -l
+total 68
+-rw-r--r--   1 jenkins jenkins  1792 Mar 15 19:01 config.xml
+-rw-r--r--   1 jenkins jenkins   156 Mar 15 18:51 hudson.model.UpdateCenter.xml
+-rw-r--r--   1 jenkins jenkins  1304 Mar 15 19:02 hudson.plugins.emailext.ExtendedEmailPublisher.xml
+-rw-r--r--   1 jenkins jenkins   370 Mar 15 18:08 hudson.plugins.git.GitTool.xml
+-rw-------   1 jenkins jenkins  1680 Mar 15 18:08 identity.key.enc
+-rw-r--r--   1 jenkins jenkins     7 Mar 15 18:51 jenkins.install.InstallUtil.lastExecVersion
+-rw-r--r--   1 jenkins jenkins     7 Mar 15 18:26 jenkins.install.UpgradeWizard.state
+-rw-r--r--   1 jenkins jenkins   179 Mar 15 18:26 jenkins.model.JenkinsLocationConfiguration.xml
+-rw-r--r--   1 jenkins jenkins   171 Mar 15 18:01 jenkins.telemetry.Correlator.xml
+drwxr-xr-x   2 jenkins jenkins     6 Mar 15 18:01 jobs
+drwxr-xr-x   4 jenkins jenkins    37 Mar 16 10:48 logs
+-rw-r--r--   1 jenkins jenkins  1037 Mar 15 18:51 nodeMonitors.xml
+drwxr-xr-x   2 jenkins jenkins     6 Mar 15 18:01 nodes
+drwxr-xr-x 123 jenkins jenkins 12288 Mar 15 18:51 plugins
+-rw-r--r--   1 jenkins jenkins   129 Mar 15 18:51 queue.xml.bak
+-rw-r--r--   1 jenkins jenkins    64 Mar 15 18:01 secret.key
+-rw-r--r--   1 jenkins jenkins     0 Mar 15 18:01 secret.key.not-so-secret
+drwx------   2 jenkins jenkins  4096 Mar 15 18:45 secrets
+drwxr-xr-x   2 jenkins jenkins   182 Mar 17 18:51 updates
+drwxr-xr-x   2 jenkins jenkins    24 Mar 15 18:01 userContent
+drwxr-xr-x   3 jenkins jenkins    57 Mar 15 18:25 users
+[student@master jenkins]$ cat config.xml
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson>
+  <disabledAdministrativeMonitors>
+    <string>jenkins.monitor.JavaVersionRecommendationAdminMonitor-11-2024-09-30-WARNING</string>
+  </disabledAdministrativeMonitors>
+  <version>2.440.1</version>
+  <numExecutors>2</numExecutors>
+  <mode>NORMAL</mode>
+  <useSecurity>true</useSecurity>
+  <authorizationStrategy class="hudson.security.FullControlOnceLoggedInAuthorizationStrategy">
+    <denyAnonymousReadAccess>true</denyAnonymousReadAccess>
+  </authorizationStrategy>
+  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
+    <disableSignup>true</disableSignup>
+    <enableCaptcha>false</enableCaptcha>
+  </securityRealm>
+  <disableRememberMe>false</disableRememberMe>
+  <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
+  <workspaceDir>${JENKINS_HOME}/workspace/${ITEM_FULL_NAME}</workspaceDir>
+  <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
+  <jdks/>
+  <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
+  <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
+  <clouds/>
+  <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
+  <views>
+    <hudson.model.AllView>
+      <owner class="hudson" reference="../../.."/>
+      <name>all</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+    </hudson.model.AllView>
+  </views>
+  <primaryView>all</primaryView>
+  <slaveAgentPort>-1</slaveAgentPort>
+  <label></label>
+  <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
+    <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
+  </crumbIssuer>
+  <nodeProperties/>
+  <globalNodeProperties/>
+  <nodeRenameMigrationNeeded>false</nodeRenameMigrationNeeded>
+</hudson>[student@master jenkins]$ ls -l jobs
+total 0
+[student@master jenkins]$ ls -al jobs
+total 4
+drwxr-xr-x  2 jenkins jenkins    6 Mar 15 18:01 .
+drwxr-xr-x 13 jenkins jenkins 4096 Mar 15 19:02 ..
+[student@master jenkins]$ 
+
